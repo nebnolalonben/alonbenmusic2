@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: nebnolalonben/alonbenmusic2  # GitHub Benutzername / Repository
+  branch: main                        # Hauptbranch
+
+media_folder: "images"               # Ordner für hochgeladene Bilder
+public_folder: "/images"             # Pfad im HTML
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: ""                        # Root-Ordner für Seiten
+    create: true                      # neue Seiten können erstellt werden
+    slug: "{{slug}}"                  # URL-Slug der Seite
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
